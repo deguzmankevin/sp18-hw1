@@ -1,18 +1,20 @@
 def squared_sum(a, b)
   # Q1 CODE HERE
-
+ return (a+b)**2
 end
-
+# puts squared_sum(1, 2)
 def sort_array_plus_one(a)
   # Q2 CODE HERE
-
+  return a.sort.map do |i|
+    i = i + 1
+  end
 end
-
+# puts(sort_array_plus_one([3, 2, 1]))
 def combine_name(first_name, last_name)
   # Q3 CODE HERE
-
+  return first_name << ' ' << last_name
 end
-
+# puts combine_name('hello', 'friend :)')
 def blockin_time(a)
   # DO NOT EDIT THIS CODE BELOW
   require './foobar'
@@ -49,4 +51,5 @@ def scrabble(word)
     z: 10,
   }
   # Q5 CODE HERE
+  return word.split('').map{|var| values[var.to_sym]}.inject(0, :+)
 end
